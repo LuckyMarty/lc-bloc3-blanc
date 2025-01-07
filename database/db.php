@@ -1,17 +1,21 @@
 <?php
+require 'vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
+$dotenv->load();
 
-function connectDB(){
-  $host = '151.80.32.16:6033';
-  $user = 'if0_35606101';
-  $password = 'UT57Hj7nKcA';
-  $database = 'if0_35606101_garage_train';
+
+function connectDB()
+{
+  $host = $_ENV['DB_HOST'];
+  $user = $_ENV['DB_USER'];
+  $password = $_ENV['DB_PASSWORD'];
+  $database = $_ENV['DB_DATABASE'];
+
   $conn = new mysqli($host, $user, $password, $database);
 
   if ($conn->connect_error) {
     die("La connexion à la base de données a échoué : " . $conn->connect_error);
-  }
-  else{
+  } else {
     return $conn;
   }
 }
-

@@ -1,6 +1,12 @@
 <?php
 session_start();
 
+// echo $_SESSION['token'];
+// // clear the session
+// session_unset();
+// session_destroy();
+
+
 require_once('database/db.php');
 $conn = connectDB();
 

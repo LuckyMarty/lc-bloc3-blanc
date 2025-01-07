@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS tokens (
 );
 
 INSERT INTO administrateurs (username, password_hash) VALUES
-('admin1', '$2y$10$TOBO0ipevsQEWJ7oME7iEegjPT7s3HL9K5PJB.qIiXwj1ED2ZhvTi'),
+('admin1', '$2y$10$sJbKe3HrstLe0RD6t4OHJeypj.jJ.vvyp93CbL3PkkOAVJwZUsG1S'),
 ('admin2', '$2y$10$TOBO0ipevsQEWJ7oME7iEegjPT7s3HL9K5PJB.qIiXwj1ED2ZhvTi');
 
 INSERT INTO clients (nom, email, telephone) VALUES
@@ -57,4 +57,4 @@ INSERT INTO rendezvous (date_heure, vehicule_id, description) VALUES
 ('2023-12-20 09:15:00', 3, "Diagnostic moteur");
 
 INSERT INTO tokens (user_id, token, expiration_date) VALUES
-(1, 'abcdef12faketoken3456', '2023-12-31 23:59:59');
+(1, 'abcdef12faketoken3456', '2025-12-31 23:59:59');
