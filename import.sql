@@ -11,6 +11,7 @@ CREATE TABLE IF NOT EXISTS vehicules (
     modele VARCHAR(50) NOT NULL,
     annee INT,
     client_id INT,
+    nb_identification VARCHAR(12),
     FOREIGN KEY (client_id) REFERENCES clients(id)
 );
 
